@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest --watchAll",
     "test:cov": "jest --coverage"
   },
   "repository": {
@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/xsahxl/jest#readme",
   "devDependencies": {
+    "@types/jest": "^28.1.6",
     "jest": "^28.1.3",
     "ts-node": "^10.9.1"
   }
