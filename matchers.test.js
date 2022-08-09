@@ -35,8 +35,27 @@ test("toBeLessThan", function () {
   expect(8).toBeLessThan(10);
 });
 
-test("toBeLessThan", function () {
+test("toBeCloseTo", function () {
   const a = 0.1;
   const b = 0.2;
   expect(a + b).toBeCloseTo(0.3);
+});
+
+test("toMatch", function () {
+  const str = "谢大脚，刘英， 小红";
+  expect(str).toMatch("谢大脚");
+});
+
+test("toContain", function () {
+  const arr = ["谢大脚", "刘英", "小红"];
+  const data = new Set(arr);
+  expect(data).toContain("谢大脚");
+});
+
+const toThrowError = function () {
+  throw new Error("this is error");
+};
+
+test("toThrow", function () {
+  expect(toThrowError).toThrow("this is error");
 });
